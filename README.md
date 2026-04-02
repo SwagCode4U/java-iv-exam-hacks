@@ -4,7 +4,7 @@
 ![Semester](https://img.shields.io/badge/Semester-SEM%20IV-blue?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-> ## 📚 Your Complete 5-Day Java OOP Exam Preparation Kit
+> ## 📚 Your Complete 7-Day Java OOP Exam Preparation Kit
 > *Because every coder's journey starts with a single jump!*
 
 ---
@@ -19,7 +19,8 @@ This comprehensive study guide is designed for **M.Sc.(CA&IT) / BCA SEM-IV** stu
 - 🎯 **Exam-Focused Questions** - Questions that actually appear in exams
 - 💻 **Code Examples** - Run and practice yourself
 - 📝 **Quick Reference** - Last-minute revision tables
-- 🎓 **Day-wise Planning** - Structured 5-day study plan
+- 🎓 **Day-wise Planning** - Structured 7-day study plan
+- 🎁 **Bonus Content** - Additional questions, cheat sheets & comparisons
 
 ---
 
@@ -34,6 +35,8 @@ This comprehensive study guide is designed for **M.Sc.(CA&IT) / BCA SEM-IV** stu
 | **Day 3** | Interface & Abstract Class | `Day-3/README.md` |
 | **Day 4** | Exception Handling | `Day-4/README.md` |
 | **Day 5** | Mixed Revision & Practice | `Day-5/README.md` |
+| **Day 6** | Applet & Graphics (AWT) | `Day-6/README.md` |
+| **Day 7** | Packages, Strings, Collections & More | `Day-7/README.md` |
 
 ---
 
@@ -62,6 +65,19 @@ Java-OOP-Study-Guide/
 │   ├── README.md               # Final Revision & Mixed Questions
 │   └── questions/
 │       └── questions.md
+├── Day-6/
+│   ├── README.md               # Applet & Graphics (AWT)
+│   └── questions/
+│       └── questions.md
+├── Day-7/
+│   ├── README.md               # Packages, Strings, Collections
+│   └── questions/
+│       └── questions.md
+├── Bonus/
+│   ├── README.md               # Bonus Content Guide
+│   ├── BONUS-Questions.md     # 120+ Practice Questions
+│   ├── CheatSheet.md          # Quick Reference
+│   └── Java-VS-CPlusPlus.md   # Java vs C++ Comparison
 └── assets/                     # Images and resources
 ```
 
@@ -103,6 +119,25 @@ Java-OOP-Study-Guide/
 - ✅ throw & throws
 - ✅ Custom Exceptions
 
+### Unit 5: Applet & Graphics (AWT)
+- ✅ What is Applet?
+- ✅ Applet Lifecycle
+- ✅ Graphics Class Methods
+- ✅ Drawing Shapes (Line, Rect, Oval, Arc, Polygon)
+- ✅ Colors and Fonts
+- ✅ AWT Components
+- ✅ Layout Managers
+
+### Unit 6: Packages, Strings & Collections
+- ✅ Packages & Import Statements
+- ✅ String Handling & String Pool
+- ✅ StringBuffer & StringBuilder
+- ✅ Wrapper Classes & Autoboxing
+- ✅ Multithreading (Thread, Runnable)
+- ✅ Collections Framework (List, Set, Map)
+- ✅ File I/O & Serialization
+- ✅ Generics & Annotations
+
 ---
 
 ## 💡 How to Use This Guide
@@ -115,8 +150,9 @@ Java-OOP-Study-Guide/
 
 ### For Quick Revision:
 1. Jump to Day 5 for mixed questions
-2. Use Quick Reference Tables
-3. Focus on important questions marked with 🎯
+2. Check Day 6 & 7 for Advanced Topics
+3. Use **Bonus** folder for extra practice (120+ questions!)
+4. Use Quick Reference Tables
 
 ---
 

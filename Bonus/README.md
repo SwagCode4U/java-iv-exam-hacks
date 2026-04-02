@@ -39,13 +39,20 @@ All-in-one quick reference sheet for quick revision before exam.
 - Common Methods
 
 ### 3. [BONUS-Questions.md](./BONUS-Questions.md)
-50 additional practice questions covering all units.
+120+ additional practice questions covering all units.
 
 **Topics Covered:**
 - Java Basics & OOP
 - Classes & Inheritance
 - Abstract Class & Interface
 - Exception Handling
+- Packages & Import Statements
+- String Handling
+- Wrapper Classes & Autoboxing
+- Multithreading
+- Collections Framework
+- File I/O
+- Generics & Annotations
 - Coding Practice
 - Advanced MCQs
 - Real-Life Scenarios
@@ -62,11 +69,13 @@ All-in-one quick reference sheet for quick revision before exam.
 
 ### Quick Revision
 ```
-Day 1 → CheatSheet + BONUS-Questions (Section 1-2)
-Day 2 → CheatSheet + BONUS-Questions (Section 3-4)
-Day 3 → CheatSheet + BONUS-Questions (Section 4)
-Day 4 → CheatSheet + BONUS-Questions (Section 4)
+Day 1 → CheatSheet + BONUS-Questions (Section 1: Java Basics)
+Day 2 → CheatSheet + BONUS-Questions (Section 2: Classes & Inheritance)
+Day 3 → CheatSheet + BONUS-Questions (Section 3: Abstract & Interface)
+Day 4 → CheatSheet + BONUS-Questions (Section 4: Exception Handling)
 Day 5 → All BONUS questions + Final revision
+Day 6 → Read BONUS-Questions (Section 9-13) for Applet & Graphics
+Day 7 → BONUS-Questions for Packages, Strings, Collections & Advanced Topics
 ```
 
 ---
@@ -82,6 +91,13 @@ Day 5 → All BONUS questions + Final revision
 | Command Line Arguments | BONUS-Questions.md | Medium |
 | Operator Precedence | CheatSheet.md | Medium |
 | Nesting of Methods | BONUS-Questions.md | Medium |
+| Packages & Imports | BONUS-Questions.md (Section 9) | High |
+| String Handling | BONUS-Questions.md (Section 10) | High |
+| Wrapper Classes | BONUS-Questions.md (Section 11) | High |
+| Multithreading | BONUS-Questions.md (Section 12) | High |
+| Collections | BONUS-Questions.md (Section 13) | High |
+| File I/O | BONUS-Questions.md (Section 14) | Medium |
+| Generics | BONUS-Questions.md (Section 15) | Medium |
 
 ---
 
@@ -119,7 +135,7 @@ Day 5 → All BONUS questions + Final revision
 ### Day 2: Classes + Bonus
 - Learn inheritance concepts
 - Practice inheritance programs
-- Solve BONUS Section 2
+- Solve BONUS Sections 1-2
 
 ### Day 3: Abstract + Interface + Bonus
 - Master abstraction
@@ -134,6 +150,17 @@ Day 5 → All BONUS questions + Final revision
 - Read CheatSheet completely
 - Solve all BONUS questions
 - Quick Java vs C++ comparison
+
+### Day 6: Applet & Graphics + Bonus
+- Study Day-6 content thoroughly
+- Practice drawing programs (smiley, flag, house)
+- Solve BONUS Sections 9-13
+
+### Day 7: Advanced Topics + Bonus
+- Study Packages, Strings, Collections
+- Practice multithreading programs
+- Review BONUS questions
+- Final revision!
 
 ---
 

@@ -900,6 +900,1086 @@ class Test {
 
 ---
 
+## 📚 Section 9: Packages & Import Statements
+
+### Q51. What is a package in Java?
+- A) Collection of classes and interfaces ✅
+- B) Collection of methods
+- C) Collection of variables
+- D) Type of class
+
+> **Hinglish:** Package ek folder jaisa hai jo related classes aur interfaces ko ek saath rakhta hai. Jaise `java.util`, `java.io`, etc.
+
+---
+
+### Q52. Which statement is used to create a package?
+- A) package ✅
+- B) import
+- C) include
+- D) require
+
+> **Hinglish:** Package create karne ke liye `package` keyword use karte hain. Yeh class file ke sabse upar likha jata hai.
+
+---
+
+### Q53. What is the correct way to import all classes from a package?
+- A) import java.util.*;
+- B) import java.util
+- C) include java.util.*
+- D) use java.util.*
+
+> **Hinglish:** `import java.util.*;` se util package ki saari classes import ho jati hain.
+
+---
+
+### Q54. Which package is automatically imported in every Java program?
+- A) java.io
+- B) java.net
+- C) java.lang ✅
+- D) java.applet
+
+> **Hinglish:** `java.lang` package automatically import hota hai har Java program mein. Isme String, System, Math, etc. hain.
+
+---
+
+### Q55. What will be the output?
+
+```java
+package college;
+class Student {
+    void display() {
+        System.out.println("Student class");
+    }
+}
+```
+- A) Student class
+- B) Compilation Error
+- C) No output
+- D) college.Student
+
+> **Hinglish:** Agar package declare kiya hai toh file ka naam `Student.java` hona chahiye, warna compilation error aayega.
+
+---
+
+### Q56. How do you access a class from a different package?
+- A) Using import statement ✅
+- B) Using include statement
+- C) Using package statement
+- D) Cannot access
+
+> **Hinglish:** Doosre package ki class access karne ke liye `import packageName.ClassName;` use karte hain.
+
+---
+
+### Q57. Which is NOT a standard Java package?
+- A) java.util
+- B) java.io
+- C) java.common ✅
+- D) java.awt
+
+> **Hinglish:** `java.common` koi standard package nahi hai. Standard packages hain: java.util, java.io, java.awt, java.lang, etc.
+
+---
+
+### Q58. What is the purpose of access protected member from different package?
+```java
+// In pack1/Parent.java
+package pack1;
+public class Parent {
+    protected int x = 10;
+}
+
+// In pack2/Child.java
+package pack2;
+import pack1.Parent;
+class Child extends Parent {
+    void show() {
+        System.out.println(x);  // Works?
+    }
+}
+```
+- A) Works ✅
+- B) Does not work
+- C) Compilation Error
+- D) Runtime Error
+
+> **Hinglish:** Protected members subclass mein inheritance ke through access ho sakte hain, chahe different package kyun na ho.
+
+---
+
+### Q59. What is fully qualified class name?
+- A) Short name of class
+- B) Complete name with package ✅
+- C) Name with .class extension
+- D) Name without package
+
+> **Hinglish:** Fully qualified name mein package bhi shamil hota hai. Jaise `java.util.ArrayList` ArrayList ka fully qualified name hai.
+
+---
+
+### Q60. Can we import same class from two different packages?
+- A) Yes
+- B) No ✅
+- C) Only in Java 8+
+- D) Only with static import
+
+> **Hinglish:** Agar do packages mein same class naam hai toh import se conflict hoga. Tab fully qualified name use karna padta hai.
+
+---
+
+## 📚 Section 10: String Handling
+
+### Q61. Which of these is NOT a way to create a String?
+- A) String s = "Hello";
+- B) String s = new String("Hello");
+- C) String s = char[] {'H','e','l','l','o'}; ✅
+- D) String s = new String(charArray);
+
+> **Hinglish:** Direct char array se String nahi bana sakte. Ya toh String constructor use karo ya new String() mein convert karo.
+
+---
+
+### Q62. What is the output?
+
+```java
+class Test {
+    public static void main(String args[]) {
+        String s1 = "Java";
+        String s2 = "Java";
+        String s3 = new String("Java");
+        
+        System.out.println(s1 == s2);
+        System.out.println(s1 == s3);
+        System.out.println(s1.equals(s3));
+    }
+}
+```
+- A) true false true ✅
+- B) true true true
+- C) false false true
+- D) true false false
+
+> **Hinglish:** s1 == s2 (same object in string pool) = true. s1 == s3 (different objects) = false. equals() content compare karta hai = true.
+
+---
+
+### Q63. Which method is used to compare two strings?
+- A) compare()
+- B) compareTo() ✅
+- C) equals()
+- D) Both B and C
+
+> **Hinglish:** equals() true/false deta hai. compareTo() 0, positive ya negative integer deta hai (lexicographical comparison).
+
+---
+
+### Q64. What is the output?
+
+```java
+class Test {
+    public static void main(String args[]) {
+        String s = "JavaProgramming";
+        System.out.println(s.length());
+        System.out.println(s.charAt(4));
+        System.out.println(s.substring(4, 8));
+    }
+}
+```
+- A) 15, 'P', "Prog"
+- B) 15, 'P', "Pro"
+- C) 15, 'a', "Pro"
+- D) 14, 'P', "Prog"
+
+> **Hinglish:** length() = 15, charAt(4) = 'P' (0-based), substring(4,8) = positions 4,5,6,7 = "Prog".
+
+---
+
+### Q65. What does "Hello".replace('l', 'L') return?
+- A) HeLLo ✅
+- B) Hello
+- C) HELLO
+- D) HeLLo
+
+> **Hinglish:** replace() sab 'l' ko 'L' se replace karta hai. Dono 'l' replace hote hain.
+
+---
+
+### Q66. What does "Java".toUpperCase().toLowerCase() return?
+- A) JAVA
+- B) java ✅
+- C) Java
+- D) Compilation Error
+
+> **Hinglish:** toUpperCase() se "JAVA" hoga, phir toLowerCase() se "java" hoga.
+
+---
+
+### Q67. Which method splits a string?
+- A) split()
+- B) tokenize()
+- C) divide()
+- D) separate()
+
+> **Hinglish:** split() method string ko delimiter ke basis pe parts mein divide karta hai aur String array return karta hai.
+
+---
+
+### Q68. What is the output?
+
+```java
+class Test {
+    public static void main(String args[]) {
+        String s = "Java";
+        s.concat(" Programming");
+        System.out.println(s);
+    }
+}
+```
+- A) Java Programming
+- B) Java ✅
+- C) Compilation Error
+- D) null
+
+> **Hinglish:** Strings immutable hain! concat() naya String return karta hai, original change nahi karta. result store nahi kiya.
+
+---
+
+### Q69. What is the difference between String, StringBuilder, and StringBuffer?
+- A) String is mutable, others immutable
+- B) String immutable, others mutable ✅
+- C) All are same
+- D) StringBuffer mutable, others immutable
+
+> **Hinglish:** String immutable hai (change nahi ho sakta). StringBuilder aur StringBuffer mutable hain. StringBuilder faster hai (not synchronized).
+
+---
+
+### Q70. What is the output?
+
+```java
+class Test {
+    public static void main(String args[]) {
+        StringBuffer sb = new StringBuffer("Hello");
+        sb.append(" World");
+        sb.insert(5, ",");
+        System.out.println(sb);
+    }
+}
+```
+- A) Hello World,
+- B) Hello, World ✅
+- C) ,Hello World
+- D) HelloWorld,
+
+> **Hinglish:** append() end mein add karta hai. insert(5, ",") position 5 pe comma lagata hai.
+
+---
+
+### Q71. What does String.trim() do?
+- A) Removes leading and trailing spaces ✅
+- B) Removes all spaces
+- C) Converts to uppercase
+- D) Removes vowels
+
+> **Hinglish:** trim() string ke starting aur ending ke spaces (whitespace) remove karta hai. Middle spaces unchanged rehte hain.
+
+---
+
+### Q72. What does "Java".indexOf('a') return?
+- A) 1
+- B) 3
+- C) -1
+- D) Both A and B ✅
+
+> **Hinglish:** indexOf() first occurrence return karta hai. 'J' = 0, 'a' = 1, 'v' = 2, 'a' = 3. So indexOf('a') = 1 return karega.
+
+---
+
+## 📚 Section 11: Wrapper Classes & Autoboxing
+
+### Q73. Which is NOT a wrapper class?
+- A) Integer
+- B) String ✅
+- C) Boolean
+- D) Character
+
+> **Hinglish:** String ek class hai, wrapper class nahi. Wrapper classes hain: Integer, Long, Short, Byte, Float, Double, Character, Boolean.
+
+---
+
+### Q74. What is boxing in Java?
+- A) Converting primitive to wrapper ✅
+- B) Converting wrapper to primitive
+- C) Creating object
+- D) Creating array
+
+> **Hinglish:** Boxing primitive type ko wrapper class object mein convert karta hai. Jaise int ko Integer mein.
+
+---
+
+### Q75. What is unboxing?
+- A) Converting primitive to wrapper
+- B) Converting wrapper to primitive ✅
+- C) Creating primitive
+- D) None
+
+> **Hinglish:** Unboxing wrapper object ko primitive mein convert karta hai. Jaise Integer ko int mein.
+
+---
+
+### Q76. What is the output?
+
+```java
+class Test {
+    public static void main(String args[]) {
+        Integer a = 10;
+        Integer b = 10;
+        System.out.println(a == b);
+        
+        Integer c = 200;
+        Integer d = 200;
+        System.out.println(c == d);
+    }
+}
+```
+- A) true true
+- B) true false ✅
+- C) false true
+- D) false false
+
+> **Hinglish:** Integer cache -128 to 127 tak hoti hai. 10 cache mein hai (true), 200 nahi (false, different objects).
+
+---
+
+### Q77. Which method converts String to int?
+- A) Integer.parseInt() ✅
+- B) Integer.valueOf()
+- C) String.valueOf()
+- D) Both A and B
+
+> **Hinglish:** parseInt() primitive int deta hai. valueOf() Integer object deta hai.
+
+---
+
+### Q78. What is autoboxing?
+- A) Automatic boxing by compiler ✅
+- B) Manual boxing
+- C) Creating wrapper manually
+- D) None
+
+> **Hinglish:** Autoboxing compiler ka feature hai jo automatically primitive ko wrapper mein convert karta hai. Jaise: `Integer i = 10;` (no need to write `Integer.valueOf(10)`)
+
+---
+
+### Q79. What is the output?
+
+```java
+class Test {
+    public static void main(String args[]) {
+        Double d = 10.5;
+        int x = d.intValue();
+        System.out.println(x);
+    }
+}
+```
+- A) 10.5
+- B) 10 ✅
+- C) 10.0
+- D) Compilation Error
+
+> **Hinglish:** intValue() Double ko int mein convert karta hai (decimal part remove hota hai).
+
+---
+
+### Q80. Which wrapper class is used for char?
+- A) Character ✅
+- B) Char
+- C) String
+- D) Boolean
+
+> **Hinglish:** Character wrapper class hai char ke liye. Isme isDigit(), isLetter(), isUpperCase() jaise utility methods hain.
+
+---
+
+## 📚 Section 12: Multithreading
+
+### Q81. How many ways to create a thread in Java?
+- A) 1
+- B) 2 ✅
+- C) 3
+- D) 4
+
+> **Hinglish:** Thread do tarike se bana sakte hain: 1) Thread class extend karna, 2) Runnable interface implement karna.
+
+---
+
+### Q82. Which interface is used to create a thread?
+- A) Thread
+- B) Runnable ✅
+- C) Callable
+- D) Executor
+
+> **Hinglish:** Runnable interface ko implement karke thread bana sakte hain. Yeh preferred way hai kyunki Java single inheritance deta hai.
+
+---
+
+### Q83. What is the output?
+
+```java
+class MyThread extends Thread {
+    public void run() {
+        System.out.print("Thread ");
+    }
+}
+
+class Test {
+    public static void main(String args[]) {
+        MyThread t = new MyThread();
+        t.start();
+        System.out.print("Main ");
+    }
+}
+```
+- A) Thread Main
+- B) Main Thread
+- C) Either A or B ✅
+- D) Thread Thread
+
+> **Hinglish:** Thread scheduling JVM pe depend karta hai. Output unpredictable ho sakta hai.
+
+---
+
+### Q84. Which method is used to pause a thread temporarily?
+- A) wait()
+- B) sleep() ✅
+- C) pause()
+- D) stop()
+
+> **Hinglish:** sleep() thread ko specified milliseconds ke liye rookta hai. Wait() synchronized block mein use hota hai.
+
+---
+
+### Q85. What is synchronization in Java?
+- A) Making method static
+- B) Preventing concurrent access ✅
+- C) Making variable final
+- D) Creating thread
+
+> **Hinglish:** Synchronization se ek time pe sirf ek thread shared resource access kar sakta hai. Yeh data inconsistency avoid karta hai.
+
+---
+
+### Q86. Which keyword is used for synchronization?
+- A) synchronized ✅
+- B) static
+- C) final
+- D) volatile
+
+> **Hinglish:** synchronized keyword method ya block ke liye use hota hai. Yeh lock mechanism provide karta hai.
+
+---
+
+### Q87. What is the output?
+
+```java
+class Counter {
+    int count = 0;
+    synchronized void increment() {
+        count++;
+    }
+}
+
+public class Test {
+    public static void main(String args[]) {
+        Counter c = new Counter();
+        // Two threads incrementing c
+        // What is final count?
+    }
+}
+```
+- A) 1
+- B) 2 ✅
+- C) 0
+- D) Unpredictable
+
+> **Hinglish:** Synchronized method mein ek time pe sirf ek thread enter kar sakta hai. Dono threads sequentially increment karenge = 2.
+
+---
+
+### Q88. What is the difference between wait() and sleep()?
+- A) wait() releases lock, sleep() does not ✅
+- B) sleep() releases lock, wait() does not
+- C) Both are same
+- D) Both release lock
+
+> **Hinglish:** wait() lock release karta hai (synchronized context mein). sleep() lock hold karta rhta hai.
+
+---
+
+### Q89. What does Thread.yield() do?
+- A) Pauses current thread ✅
+- B) Stops thread permanently
+- C) Kills thread
+- D) Starts new thread
+
+> **Hinglish:** yield() current thread ko ready state mein wapas jane deta hai taaki same priority ke threads ko chance mile.
+
+---
+
+### Q90. What is daemon thread?
+- A) High priority thread
+- B) Low priority thread that runs in background ✅
+- C) Main thread
+- D) Fast thread
+
+> **Hinglish:** Daemon threads background mein run karte hain (Garbage Collector jaisa). Program end hone pe ye automatically stop ho jate hain.
+
+---
+
+## 📚 Section 13: Collections Framework
+
+### Q91. Which collection does NOT allow duplicates?
+- A) List
+- B) Set ✅
+- C) ArrayList
+- D) LinkedList
+
+> **Hinglish:** Set interface duplicate elements allow nahi karta hai. List allow karta hai.
+
+---
+
+### Q92. What is the default capacity of ArrayList?
+- A) 5
+- B) 10 ✅
+- C) 15
+- D) 0
+
+> **Hinglish:** ArrayList ka default capacity **10** hai. Yeh dynamically grow kar sakta hai.
+
+---
+
+### Q93. Which is the correct way to iterate over ArrayList?
+```java
+ArrayList<String> list = new ArrayList<>();
+list.add("A");
+list.add("B");
+```
+- A) for(String s : list)
+- B) Iterator it = list.iterator(); while(it.hasNext())
+- C) for(int i=0; i<list.size(); i++)
+- D) All of the above ✅
+
+> **Hinglish:** ArrayList ko three tarike se iterate kar sakte hain: enhanced for loop, Iterator, ya simple for loop with index.
+
+---
+
+### Q94. What is the output?
+
+```java
+import java.util.*;
+
+class Test {
+    public static void main(String args[]) {
+        ArrayList<String> al = new ArrayList<>();
+        al.add("Java");
+        al.add("Python");
+        al.add("Java");
+        
+        System.out.println(al.size());
+        System.out.println(al.contains("Java"));
+        System.out.println(al.get(1));
+    }
+}
+```
+- A) 3 true Python
+- B) 2 true Python
+- C) 3 true Java
+- D) 2 false Python
+
+> **Hinglish:** ArrayList duplicate allow karta hai. size = 3, contains("Java") = true, get(1) = "Python" (0-based index).
+
+---
+
+### Q95. Which interface does HashMap implement?
+- A) List
+- B) Set
+- C) Map ✅
+- D) Collection
+
+> **Hinglish:** HashMap Map interface implement karta hai, List ya Set nahi. Map key-value pairs store karta hai.
+
+---
+
+### Q96. What is the output?
+
+```java
+import java.util.*;
+
+class Test {
+    public static void main(String args[]) {
+        HashMap<Integer, String> hm = new HashMap<>();
+        hm.put(1, "Java");
+        hm.put(2, "Python");
+        hm.put(1, "C++");
+        
+        System.out.println(hm.size());
+        System.out.println(hm.get(1));
+    }
+}
+```
+- A) 2 C++
+- B) 2 Java
+- C) 3 C++
+- D) 3 Java
+
+> **Hinglish:** HashMap mein key unique honi chahiye. put(1, "C++") se pehle wala "Java" replace ho jayega. size = 2, get(1) = "C++".
+
+---
+
+### Q97. Which collection maintains insertion order?
+- A) HashSet
+- B) LinkedHashSet ✅
+- C) TreeSet
+- D) HashMap
+
+> **Hinglish:** LinkedHashSet insertion order maintain karta hai. HashSet aur TreeSet yeh nahi karte.
+
+---
+
+### Q98. What is the difference between HashSet and TreeSet?
+- A) HashSet maintains order, TreeSet does not
+- B) HashSet does not maintain order, TreeSet maintains sorted order ✅
+- C) Both are same
+- D) TreeSet allows null, HashSet does not
+
+> **Hinglish:** HashSet koi order maintain nahi karta. TreeSet elements ko sorted (ascending) order mein rakhta hai.
+
+---
+
+### Q99. Which interface is used to sort elements?
+- A) Comparable ✅
+- B) Comparator
+- C) Both A and B
+- D) Serializable
+
+> **Hinglish:** Comparable interface se class apne elements ko compare kar sakti hai (compareTo method). Comparator alag se sorting logic provide karta hai.
+
+---
+
+### Q100. What will be the output?
+
+```java
+import java.util.*;
+
+class Test {
+    public static void main(String args[]) {
+        Vector<Integer> v = new Vector<>();
+        v.add(10);
+        v.add(20);
+        v.add(10);
+        
+        System.out.println(v);
+    }
+}
+```
+- A) [10, 20, 10]
+- B) [10, 20]
+- C) Compilation Error
+- D) [20, 10]
+
+> **Hinglish:** Vector List ki tarah kaam karta hai aur insertion order maintain karta hai. Ye duplicate allow karta hai.
+
+---
+
+## 📚 Section 14: File I/O (Input/Output)
+
+### Q101. Which class is used to read bytes from a file?
+- A) FileInputStream ✅
+- B) FileReader
+- C) BufferedReader
+- D) Scanner
+
+> **Hinglish:** FileInputStream bytes read karne ke liye hai. Character data ke liye FileReader use hota hai.
+
+---
+
+### Q102. Which class is used to write text to a file?
+- A) FileWriter ✅
+- B) FileOutputStream
+- C) FileInputStream
+- D) InputStream
+
+> **Hinglish:** FileWriter character stream ke liye hai (text files). Binary data ke liye FileOutputStream use hota hai.
+
+---
+
+### Q103. What is the output?
+
+```java
+import java.io.*;
+
+class Test {
+    public static void main(String args[]) throws IOException {
+        FileWriter fw = new FileWriter("test.txt");
+        fw.write("Hello Java");
+        fw.close();
+        
+        FileReader fr = new FileReader("test.txt");
+        System.out.println(fr.read());
+        fr.close();
+    }
+}
+```
+- A) Hello Java
+- B) H ✅
+- C) 72
+- D) Compilation Error
+
+> **Hinglish:** read() ek baar mein sirf ek character ya ek byte return karta hai. 'H' ka ASCII value 72 hai, jo print hoga.
+
+---
+
+### Q104. Which class provides readLine() method?
+- A) BufferedReader ✅
+- B) BufferedWriter
+- C) FileReader
+- D) InputStreamReader
+
+> **Hinglish:** BufferedReader ka readLine() method ek poora line read karta hai. Yeh efficient bhi hai kyunki buffering use karta hai.
+
+---
+
+### Q105. What is the difference between byte stream and character stream?
+- A) Byte for images, character for text ✅
+- B) No difference
+- C) Character for images, byte for text
+- D) Both are same
+
+> **Hinglish:** Byte streams (InputStream/OutputStream) binary data ke liye. Character streams (Reader/Writer) text data ke liye.
+
+---
+
+### Q106. Which keyword is used to handle checked exceptions in method signature?
+- A) throw
+- B) throws ✅
+- C) try
+- D) catch
+
+> **Hinglish:** throws keyword method signature mein lagta hai indicate karne ke liye ki yeh method exception throw kar sakta hai.
+
+---
+
+### Q107. What is serialization?
+- A) Converting object to bytes ✅
+- B) Converting bytes to object
+- C) Reading from file
+- D) Writing to file
+
+> **Hinglish:** Serialization object ko byte stream mein convert karta hai taaki ise file mein ya network pe bhej saken. Deserialization reverse hai.
+
+---
+
+### Q108. Which interface must a class implement for serialization?
+- A) Serializable ✅
+- B) Externalizable
+- C) Both A and B
+- D) None
+
+> **Hinglish:** Object ko serialize karne ke liye class ko Serializable interface implement karna hota hai.
+
+---
+
+## 📚 Section 15: Generics & Annotations
+
+### Q109. What is the purpose of generics in Java?
+- A) Type safety at compile time ✅
+- B) Memory optimization
+- C) Faster execution
+- D) Security
+
+> **Hinglish:** Generics compile-time type checking provide karte hain. Yeh ClassCastException se bachate hain aur code clean hota hai.
+
+---
+
+### Q110. What is the output?
+
+```java
+class Test {
+    public static void main(String args[]) {
+        ArrayList<String> al = new ArrayList<>();
+        al.add("Java");
+        al.add(100);  // What happens?
+    }
+}
+```
+- A) Works fine
+- B) Compilation Error ✅
+- C) Runtime Error
+- D) null
+
+> **Hinglish:** Generic type <String> declare kiya hai, toh sirf String hi add kar sakte hain. Integer add karne pe compilation error aayega.
+
+---
+
+### Q111. What is an annotation in Java?
+- A) Metadata about a program ✅
+- B) Type of variable
+- C) Access modifier
+- D) Type of loop
+
+> **Hinglish:** Annotations metadata provide karte hain jo program ke baare mein information dete hain. Jaise @Override, @Deprecated, etc.
+
+---
+
+### Q112. Which annotation indicates a method overrides a superclass method?
+- A) @Override ✅
+- B) @Overload
+- C) @Inherited
+- D) @Polymorphism
+
+> **Hinglish:** @Override annotation lagane se compiler check karta hai ki method actually parent class ko override kar raha hai ya nahi.
+
+---
+
+## 📚 Section 16: Important Programs for Exams
+
+### Q113. Write a program to demonstrate StringBuffer methods.
+
+```java
+class StringBufferDemo {
+    public static void main(String args[]) {
+        StringBuffer sb = new StringBuffer("Hello");
+        
+        // append
+        sb.append(" World");
+        System.out.println("After append: " + sb);
+        
+        // insert
+        sb.insert(5, ",");
+        System.out.println("After insert: " + sb);
+        
+        // replace
+        sb.replace(6, 11, "Java");
+        System.out.println("After replace: " + sb);
+        
+        // delete
+        sb.delete(5, 10);
+        System.out.println("After delete: " + sb);
+        
+        // reverse
+        sb.reverse();
+        System.out.println("After reverse: " + sb);
+        
+        // capacity
+        System.out.println("Capacity: " + sb.capacity());
+    }
+}
+```
+
+---
+
+### Q114. Write a program to demonstrate HashMap.
+
+```java
+import java.util.*;
+
+class HashMapDemo {
+    public static void main(String args[]) {
+        HashMap<Integer, String> hm = new HashMap<>();
+        
+        // Add elements
+        hm.put(1, "Java");
+        hm.put(2, "Python");
+        hm.put(3, "C++");
+        
+        // Get element
+        System.out.println("Key 2: " + hm.get(2));
+        
+        // Check key
+        System.out.println("Contains key 1: " + hm.containsKey(1));
+        
+        // Remove
+        hm.remove(2);
+        
+        // Iterate
+        for(Map.Entry m : hm.entrySet()) {
+            System.out.println(m.getKey() + ": " + m.getValue());
+        }
+    }
+}
+```
+
+---
+
+### Q115. Write a program demonstrating thread creation using Runnable.
+
+```java
+class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println("Thread running via Runnable");
+    }
+}
+
+class Test {
+    public static void main(String args[]) {
+        MyRunnable r = new MyRunnable();
+        Thread t = new Thread(r);
+        t.start();
+    }
+}
+```
+
+---
+
+### Q116. Write a program to demonstrate synchronized method.
+
+```java
+class Counter {
+    int count = 0;
+    
+    synchronized void increment() {
+        count++;
+        System.out.println("Count: " + count);
+    }
+}
+
+class MyThread extends Thread {
+    Counter c;
+    MyThread(Counter c) {
+        this.c = c;
+    }
+    
+    public void run() {
+        for(int i = 0; i < 5; i++) {
+            c.increment();
+        }
+    }
+}
+
+class Test {
+    public static void main(String args[]) {
+        Counter c = new Counter();
+        MyThread t1 = new MyThread(c);
+        MyThread t2 = new MyThread(c);
+        t1.start();
+        t2.start();
+    }
+}
+```
+
+---
+
+### Q117. Write a program to read file using BufferedReader.
+
+```java
+import java.io.*;
+
+class FileReadDemo {
+    public static void main(String args[]) throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader("test.txt"));
+        
+        String line;
+        while((line = br.readLine()) != null) {
+            System.out.println(line);
+        }
+        br.close();
+    }
+}
+```
+
+---
+
+### Q118. Write a program to demonstrate ArrayList.
+
+```java
+import java.util.*;
+
+class ArrayListDemo {
+    public static void main(String args[]) {
+        ArrayList<String> al = new ArrayList<>();
+        
+        // Add elements
+        al.add("Java");
+        al.add("Python");
+        al.add("C++");
+        al.add(1, "JavaScript");  // Insert at index
+        
+        // Size
+        System.out.println("Size: " + al.size());
+        
+        // Get
+        System.out.println("Element at 2: " + al.get(2));
+        
+        // Contains
+        System.out.println("Contains Java: " + al.contains("Java"));
+        
+        // Remove
+        al.remove("Python");
+        
+        // Iterate
+        for(String s : al) {
+            System.out.println(s);
+        }
+    }
+}
+```
+
+---
+
+### Q119. Write a program to demonstrate autoboxing and unboxing.
+
+```java
+class AutoboxingDemo {
+    public static void main(String args[]) {
+        // Autoboxing: primitive to wrapper
+        Integer i = 100;  // Automatically boxed
+        
+        // Unboxing: wrapper to primitive
+        int j = i;  // Automatically unboxed
+        
+        // Method with wrapper
+        process(Integer.valueOf(50));
+    }
+    
+    static void process(Integer num) {
+        System.out.println("Processing: " + num);
+        int x = num + 10;  // Unboxing in expression
+        System.out.println("Result: " + x);
+    }
+}
+```
+
+---
+
+### Q120. Write a program demonstrating custom exception.
+
+```java
+class InvalidAgeException extends Exception {
+    InvalidAgeException(String msg) {
+        super(msg);
+    }
+}
+
+class VoterCheck {
+    static void checkAge(int age) throws InvalidAgeException {
+        if(age < 18) {
+            throw new InvalidAgeException("Age must be 18 or above!");
+        }
+        System.out.println("Eligible to vote");
+    }
+    
+    public static void main(String args[]) {
+        try {
+            checkAge(16);
+        } catch(InvalidAgeException e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
+    }
+}
+```
+
+---
+
 ## 🎯 Final Practice Tips
 
 1. **Practice code daily** - Type programs manually
@@ -907,6 +1987,27 @@ class Test {
 3. **Draw diagrams** - For inheritance, memory
 4. **Solve MCQs** - Focus on tricky ones
 5. **Time management** - Don't spend too long on one question
+
+### Topic-wise Quick Summary:
+
+**Packages:** package keyword, import statements, java.lang auto-import
+**Strings:** Immutable, String pool, StringBuffer/StringBuilder (mutable)
+**Wrapper Classes:** Integer, Double, etc., autoboxing/unboxing, cache
+**Multithreading:** Thread vs Runnable, synchronized, wait/sleep
+**Collections:** List (allow duplicates), Set (no duplicates), Map (key-value)
+**File I/O:** Streams (byte), Readers/Writers (character), Serialization
+
+### Important Methods to Remember:
+
+```
+String:     length(), charAt(), substring(), equals(), indexOf(), split()
+StringBuffer: append(), insert(), replace(), delete(), reverse()
+ArrayList:  add(), get(), remove(), size(), contains()
+HashMap:    put(), get(), remove(), keySet(), entrySet()
+Thread:     start(), run(), sleep(), join(), yield()
+```
+
+---
 
 ---
 
